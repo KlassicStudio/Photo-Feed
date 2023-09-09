@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7cf63d9651.js" crossorigin="anonymous"></script>
+    <style>
+    .square {
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center;
+  }
+  </style>
     <title>Instagram Photo Feed with Bootstrap</title>
   </head>
   <body>
@@ -27,18 +35,56 @@
         </div>
       </nav>
 
-
-      <!-- Navigation tab -->
-
-      <nav aria-label="...">
-        <ul class="pagination pagination-lg justify-content-center">
-          <li class="page-item active" aria-current="page">
-            <span class="page-link"><i class="fa-solid fa-table-cells"></i></span>
-          </li>
-          <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-square"></i></a></li>
+    
+       <!-- Navigation tabs -->
+      
+      <ul class="nav mb-3 justify-content-center" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
         
-        </ul>
-      </nav>
+      </ul>
+
+      <!-- tab content -->
+      <div class="tab-content justify-content-center" id="pills-tabContent">
+
+        <!-- grid content -->
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          <div class="container text-center">
+            <div class="row row-cols-3">
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg')"></div></div>
+              <div class="col-4 p-1"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_1280.jpg')"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- individual posts -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+          <div class="container-fluid d-flex justify-content-center p-3">
+          <div class="col-4"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg')"></div></div>
+          </div>
+          <div class="container-fluid d-flex justify-content-center p-3">
+            <div class="col-4"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg')"></div></div>
+            </div>
+        
+
+
+
+
+        </div>
+        
+      </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
