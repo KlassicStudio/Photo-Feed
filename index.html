@@ -19,8 +19,8 @@
     <!-- Navigation bar -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <i class="fa-brands fa-instagram fa-2xl"></i><span style="margin-left: 10px; font-size: 20px; font-weight: bold;">Instagram</span>
+        <div class="container my-2">
+          <i class="fa-brands fa-instagram fa-2xl ms-5"></i><span style="margin-left: 10px; font-size: 20px; font-weight: bold;">Instagram</span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,17 +29,53 @@
              
             </ul>
             <div class="d-flex">
-              <button type="button" class="btn btn-success me-2">Create a new post</button>
-              <button type="button" class="btn btn-secondary align-items-center"><i class="fa-solid fa-gear"></i> <i class="fa-solid fa-caret-down fa-sm ms-1"></i></button>
+              <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create a new post</button>
+              <div class="dropdown-center">
+                <button class="btn btn-secondary dropdown-toggle align-items-center me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear me-2"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" style="color:red" href="#">Logout</a></li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
       </nav>
 
+
+       <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bold">Caption:</p>
+        <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea"></textarea>
+        <div class="row m-0 p-0">
+        <div class="col-1 rounded-2 border border-1 mt-2 py-3 bg-light me-2 position-relative"><i class="fa-solid fa-camera position-absolute top-50 start-50 translate-middle"></i></div>
+        <div class="col-1 rounded-2 border border-1 mt-2 py-2 bg-light position-relative"><i class="fa-solid fa-location-dot position-absolute top-50 start-50 translate-middle"></i></div>
+        </div>
+        
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     
        <!-- Navigation tabs -->
       
-      <ul class="nav mb-3 justify-content-center" role="tablist">
+      <ul class="nav nav-tabs mt-2 justify-content-center" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active icons" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
         </li>
@@ -49,8 +85,12 @@
         
       </ul>
 
+      
+
       <!-- tab content -->
       <div class="tab-content justify-content-center" id="pills-tabContent">
+
+       
 
         <!-- grid content -->
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
@@ -101,16 +141,16 @@
             <div class="row-cols-1">
                <!-- header -->
               <div class="container row p-3 align-items-baseline">
-            <div class="col-11"><h4>A nice backyard</h4></div>
-            <div class="col-1"><p>08/26</p></div>
+            <div class="col-11"><h4>AI Rose by Midjourney</h4></div>
+            <div class="col-1"><p>09/26</p></div>
           </div>
           <!-- image -->
-          <div class="col"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg')"></div></div>
+          <div class="col"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg')"></div></div>
           </div>
           <!-- description -->
           <div class="container p-3 align-items-baseline">
-            <div class="col"><p class="fw-bold fs-5 m-0">204 Likes</p></div>
-            <div class="col"><p>This is an example of a great photo that you can post on Instagram.</p></div>
+            <div class="col"><p class="fw-bold fs-5 m-0">926 Likes</p></div>
+            <div class="col"><p>This is a rose generated by Midjourney.</p></div>
           </div>
 
         </div>
@@ -123,16 +163,16 @@
             <div class="row-cols-1">
                <!-- header -->
               <div class="container row p-3 align-items-baseline">
-            <div class="col-11"><h4>A nice backyard</h4></div>
-            <div class="col-1"><p>08/26</p></div>
+            <div class="col-11"><h4>My Kitty Braulio</h4></div>
+            <div class="col-1"><p>10/26</p></div>
           </div>
           <!-- image -->
-          <div class="col"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg')"></div></div>
+          <div class="col"><div class="square" style="background-image: url('https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg')"></div></div>
           </div>
           <!-- description -->
           <div class="container p-3 align-items-baseline">
-            <div class="col"><p class="fw-bold fs-5 m-0">204 Likes</p></div>
-            <div class="col"><p>This is an example of a great photo that you can post on Instagram.</p></div>
+            <div class="col"><p class="fw-bold fs-5 m-0">1,957 Likes</p></div>
+            <div class="col"><p>Braulio posing for a professional photographer...</p></div>
           </div>
 
         </div>
